@@ -2,19 +2,23 @@ import type { NavLinkType } from '@/layouts/type'
 
 export const navbarLinkData: NavLinkType[] = [
   {
-    title: 'Tentang kami',
+    title: 'Program',
     link: { name: '' }
   },
   {
-    title: 'Cara Pakai',
+    title: 'Tentang',
     link: { name: '' }
   },
   {
-    title: 'Manfaat',
+    title: 'Alur Proses',
     link: { name: '' }
   },
   {
-    title: 'Ajukan Inkubasi',
+    title: 'Artikel',
+    link: { name: '' }
+  },
+  {
+    title: 'Pengajuan Inkubasi',
     link: { name: '' }
   }
 ]

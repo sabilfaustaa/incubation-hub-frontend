@@ -15,7 +15,7 @@
 
   <!-- <Brands /> -->
 
-  <ManfaatSwiper />
+  <ArtikelSwiper />
 
   <!-- <Testimonial /> -->
 
@@ -37,7 +37,7 @@ import ProgramHubSwiper from '@/views/landing/components/ProgramHubSwiper.vue'
 import AlurProses from '@/views/landing/components/AlurProses.vue'
 import Brands from '@/views/landing/components/Brands.vue'
 import Testimonial from '@/views/landing/components/Testimonial.vue'
-import ManfaatSwiper from '@/views/landing/components/ManfaatSwiper.vue'
+import ArtikelSwiper from '@/views/landing/components/ArtikelSwiper.vue'
 import Registrasi from '@/views/landing/components/Registrasi.vue'
 import Footer from '@/views/landing/components/Footer.vue'
 </script>

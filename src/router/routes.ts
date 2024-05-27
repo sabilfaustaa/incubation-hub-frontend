@@ -13,6 +13,25 @@ const errorPageRoutes = [
   }
 ]
 
+const authRoutes = [
+  {
+    path: '/sign-in',
+    name: 'auth.sign-in',
+    meta: {
+      title: 'Incubation Hub - Sign In'
+    },
+    component: () => import('@/views/auth/SignIn.vue')
+  },
+  {
+    path: '/sign-up',
+    name: 'auth.sign-up',
+    meta: {
+      title: 'Incubation Hub - Sign Up'
+    },
+    component: () => import('@/views/auth/SignUp.vue')
+  }
+]
+
 const landingRoute = [
   {
     path: '',
@@ -61,4 +80,4 @@ const adminRoutes = [
   // }
 ]
 
-export const allRoutes = [...errorPageRoutes, ...landingRoute, ...adminRoutes]
+export const allRoutes = [...errorPageRoutes, ...landingRoute, ...authRoutes]

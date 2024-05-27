@@ -63,15 +63,18 @@
       <button class="navbar-toggler" type="button" @click="showMobileNav = !showMobileNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a
-        class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
-        href=""
-        rel="noopener"
-        target="_blank"
-      >
-        <Icon :icon="loginIcon" class="fs-4 lh-1 me-1" />
-        &nbsp;Masuk
-      </a>
+
+      <router-link to="/sign-in">
+        <a
+          class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+          href=""
+          rel="noopener"
+          target="_blank"
+        >
+          <Icon :icon="loginIcon" class="fs-4 lh-1 me-1" />
+          &nbsp;Masuk
+        </a>
+      </router-link>
     </div>
   </header>
 
