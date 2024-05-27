@@ -23,12 +23,12 @@ const authRoutes = [
     component: () => import('@/views/auth/SignIn.vue')
   },
   {
-    path: '/sign-up',
-    name: 'auth.sign-up',
+    path: '/forgot-password',
+    name: 'auth.forgot-password',
     meta: {
-      title: 'Incubation Hub - Sign Up'
+      title: 'Incubation Hub - Forgot Password'
     },
-    component: () => import('@/views/auth/SignUp.vue')
+    component: () => import('@/views/auth/ForgotPassword.vue')
   }
 ]
 
@@ -63,21 +63,69 @@ const landingsRoutes = [
 ]
 
 const adminRoutes = [
-  // {
-  //   path: '',
-  //   name: 'landings',
-  //   meta: { authRequired: false },
-  //   children: [
-  //     {
-  //       path: '/test',
-  //       name: 'landings.test',
-  //       meta: {
-  //         title: 'Incubation Hub - Jakarta Smart City'
-  //       },
-  //       component: () => import('s//index.vue')
-  //     }
-  //   ]
-  // }
+  {
+    path: '/admin',
+    name: 'admin',
+    meta: { authRequired: false },
+    children: [
+      {
+        path: 'dashboard',
+        name: 'admin.dashboard',
+        meta: {
+          title: 'Incubation Hub - Dashboard'
+        },
+        component: () => import('@/views/admin/Dashboard.vue')
+      },
+      {
+        path: 'profil',
+        name: 'admin.profil',
+        meta: {
+          title: 'Incubation Hub - Profil'
+        },
+        component: () => import('@/views/admin/Profil.vue')
+      },
+      {
+        path: 'pengajuan-inkubasi',
+        name: 'admin.pengajuan-inkubasi',
+        meta: {
+          title: 'Incubation Hub - Pengajuan Inkubasi'
+        },
+        component: () => import('@/views/admin/PengajuanInkubasi.vue')
+      },
+      {
+        path: 'detail-pengajuan-inkubasi',
+        name: 'admin.detail-pengajuan-inkubasi',
+        meta: {
+          title: 'Incubation Hub - Pengajuan Inkubasi'
+        },
+        component: () => import('@/views/admin/DetailPengajuanInkubasi.vue')
+      },
+      {
+        path: 'form-pengajuan-inkubasi',
+        name: 'admin.form-pengajuan-inkubasi',
+        meta: {
+          title: 'Incubation Hub - Pengajuan Inkubasi'
+        },
+        component: () => import('@/views/admin/FormPengajuanInkubasi.vue')
+      },
+      {
+        path: 'history',
+        name: 'admin.history',
+        meta: {
+          title: 'Incubation Hub - History Pengajuan'
+        },
+        component: () => import('@/views/admin/History.vue')
+      },
+      {
+        path: 'notifikasi',
+        name: 'admin.notifikasi',
+        meta: {
+          title: 'Incubation Hub - Notifikasi'
+        },
+        component: () => import('@/views/admin/Notifikasi.vue')
+      }
+    ]
+  }
 ]
 
-export const allRoutes = [...errorPageRoutes, ...landingRoute, ...authRoutes]
+export const allRoutes = [...errorPageRoutes, ...landingRoute, ...authRoutes, ...adminRoutes]

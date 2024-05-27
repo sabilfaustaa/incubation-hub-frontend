@@ -1,9 +1,14 @@
 <template>
-  <b-col lg="3" md="4" class="border-end pb-5 mt-n5">
+  <b-col lg="3" md="4" class="border-end pb-5 mt-n5 px-5">
     <div class="position-sticky top-0">
       <div class="text-center pt-5">
         <div class="d-table position-relative mx-auto mt-2 mt-lg-4 pt-5 mb-3">
-          <img :src="user18" class="d-block rounded-circle" width="120" alt="John Doe" />
+          <img
+            :src="profileImage"
+            class="d-block rounded-circle bg-secondary"
+            width="120"
+            alt="John Doe"
+          />
           <b-button
             variant="light"
             size="sm"
@@ -14,8 +19,9 @@
             <Icon :icon="RefreshIcon" />
           </b-button>
         </div>
-        <h2 class="h5 mb-1">John Doe</h2>
-        <p class="mb-3 pb-3">jonny@email.com</p>
+        <h2 class="h5 mb-1">Defrizal</h2>
+        <!-- <h2 class="h6 mb-1 fw-medium">Role User</h2> -->
+        <p class="mb-3 pb-3">defrizal@gmail.com</p>
         <b-button
           variant="secondary"
           class="w-100 d-md-none mt-n2 mb-3"
@@ -28,16 +34,54 @@
         </b-button>
 
         <div id="account-menu" class="list-group list-group-flush collapse d-md-block">
-          <template v-for="(item, idx) in sidebarLinkData" :key="item.title">
-            <router-link
-              :to="{ name: item.route.name }"
-              class="list-group-item list-group-item-action d-flex align-items-center"
-              :class="{ active: item.route.name === currentRouteName }"
-            >
-              <Icon :icon="item.icon" class="fs-xl opacity-60 me-2" />
-              {{ item.title }}
-            </router-link>
-          </template>
+          <p class="text-start">DASHBOARD</p>
+          <router-link
+            :to="{ name: 'admin.dashboard' }"
+            class="list-group-item list-group-item-action d-flex align-items-center"
+            :class="{ active: 'admin.dashboard' === currentRouteName }"
+          >
+            <Icon :icon="CollectionIcon" class="fs-xl opacity-60 me-2" />
+            Dashboard
+          </router-link>
+
+          <br />
+
+          <p class="text-start">INCUBATION</p>
+          <router-link
+            :to="{ name: 'admin.pengajuan-inkubasi' }"
+            class="list-group-item list-group-item-action d-flex align-items-center"
+            :class="{ active: 'admin.pengajuan-inkubasi' === currentRouteName }"
+          >
+            <Icon :icon="CollectionIcon" class="fs-xl opacity-60 me-2" />
+            Pengajuan Inkubasi
+          </router-link>
+          <router-link
+            :to="{ name: 'admin.history' }"
+            class="list-group-item list-group-item-action d-flex align-items-center"
+            :class="{ active: 'admin.history' === currentRouteName }"
+          >
+            <Icon :icon="CollectionIcon" class="fs-xl opacity-60 me-2" />
+            History Inkubasi
+          </router-link>
+
+          <br />
+          <p class="text-start">SETTINGS</p>
+          <router-link
+            :to="{ name: 'admin.profil' }"
+            class="list-group-item list-group-item-action d-flex align-items-center"
+            :class="{ active: 'admin.profil' === currentRouteName }"
+          >
+            <Icon :icon="CollectionIcon" class="fs-xl opacity-60 me-2" />
+            Profil
+          </router-link>
+          <router-link
+            :to="{ name: 'admin.notifikasi' }"
+            class="list-group-item list-group-item-action d-flex align-items-center"
+            :class="{ active: 'admin.notifikasi' === currentRouteName }"
+          >
+            <Icon :icon="BellIcon" class="fs-xl opacity-60 me-2" />
+            Notifikasi
+          </router-link>
         </div>
       </div>
     </div>
@@ -45,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-import user18 from '@/assets/img/avatar/18.jpg'
+import profileImage from '@/assets/images/img-ijay.png'
 import { Icon } from '@iconify/vue'
 import RefreshIcon from '@iconify/icons-bx/refresh'
 import UserDetailIcon from '@iconify/icons-bx/bxs-user-detail'
@@ -62,65 +106,14 @@ import LogOutIcon from '@iconify/icons-bx/log-out'
 
 import router from '@/router'
 import { BButton } from 'bootstrap-vue-next'
+import { ref, watch } from 'vue'
 
-const currentRouteName = router.currentRoute.value.name
+let currentRouteName = ref(router.currentRoute.value.name)
 
-const sidebarLinkData = [
-  {
-    icon: CogIcon,
-    title: 'Account Details',
-    route: {
-      name: 'account.details'
-    }
-  },
-  {
-    icon: LockAltIcon,
-    title: 'Security',
-    route: {
-      name: 'account.security'
-    }
-  },
-  {
-    icon: BellIcon,
-    title: 'Notifications',
-    route: {
-      name: 'account.notifications'
-    }
-  },
-  {
-    icon: ChatIcon,
-    title: 'Messages',
-    route: {
-      name: 'account.messages'
-    }
-  },
-  {
-    icon: BookmarkIcon,
-    title: 'Saved Items',
-    route: {
-      name: 'account.saved-items'
-    }
-  },
-  {
-    icon: CollectionIcon,
-    title: 'My Collections',
-    route: {
-      name: 'account.collections'
-    }
-  },
-  {
-    icon: CreditCardIcon,
-    title: 'Payment Details',
-    route: {
-      name: 'account.payment'
-    }
-  },
-  {
-    icon: LogOutIcon,
-    title: 'Sign Out',
-    route: {
-      name: 'account.sign-in'
-    }
+watch(
+  () => router.currentRoute.value.name,
+  () => {
+    currentRouteName.value = router.currentRoute.value.name
   }
-]
+)
 </script>

@@ -6,7 +6,7 @@
       class="d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5"
     >
       <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px">
-        <h1 class="text-center text-xl-start">Selamat Datang</h1>
+        <h1 class="text-center text-xl-start">Login</h1>
         <!-- <p class="text-center text-xl-start pb-3 mb-3">
           Belum punya akun?
           <router-link :to="{ name: 'auth.sign-up' }">Daftar Disini.</router-link>
@@ -38,7 +38,9 @@
           >
         </b-form>
 
-        <a href="#" class="btn btn-link btn-lg w-100">Lupa Password?</a>
+        <router-link to="/forgot-password">
+          <a href="#" class="btn btn-link btn-lg w-100">Lupa Password?</a>
+        </router-link>
         <hr class="my-4" />
         <!-- <h6 class="text-center mb-4">Or sign in with your social network</h6>
         <b-row class="row-cols-1 row-cols-sm-2">
@@ -94,7 +96,7 @@ const route = useRoute()
 
 const signIn = () => {
   if (useFakeAuth.signIn(userData.value.email, userData.value.password)) {
-    return router.push('/dashboard')
+    return router.push('/admin/dashboard')
   }
   error.value = true
 }

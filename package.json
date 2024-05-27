@@ -37,6 +37,7 @@
     "vue-prism-component": "^2.0.0",
     "vue-router": "^4.2.5",
     "vue-the-mask": "^0.11.1",
+    "vue3-apexcharts": "^1.5.3",
     "vue3-clipboard": "^1.0.0",
     "vue3-lottie": "^3.2.0"
   },

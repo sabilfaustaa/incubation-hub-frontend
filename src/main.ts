@@ -7,6 +7,7 @@ import router from '@/router'
 
 import VueTheMask from 'vue-the-mask'
 import Vue3Lottie from 'vue3-lottie'
+import VueApexCharts from 'vue3-apexcharts'
 
 import 'boxicons'
 import 'jarallax/dist/jarallax.min.css'
@@ -36,4 +37,5 @@ app.use(createPinia())
 app.use(router)
 app.use(VueTheMask)
 app.use(Vue3Lottie)
+app.use(VueApexCharts)
 app.mount('#app')
