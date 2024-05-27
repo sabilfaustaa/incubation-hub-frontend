@@ -39,7 +39,7 @@
               </b-collapse>
             </b-col>
             <b-col xl="4" lg="5" class="pt-2 pt-lg-0">
-              <h6 class="mb-2">Contact Us</h6>
+              <h6 class="mb-2">Kontak Kami</h6>
               <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
             </b-col>
           </div>

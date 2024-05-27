@@ -5,6 +5,8 @@
 
   <ProgramHubSwiper />
 
+  <AlurProses />
+
   <!-- <Services /> -->
 
   <!-- <CovidBanner /> -->
@@ -13,13 +15,13 @@
 
   <!-- <Brands /> -->
 
+  <ManfaatSwiper />
+
   <!-- <Testimonial /> -->
 
-  <!-- <NewsSwiper /> -->
+  <Registrasi />
 
-  <Contact />
-
-  <FinancialFooter />
+  <Footer />
 
   <BackToTop />
 </template>
@@ -32,9 +34,10 @@ import CovidBanner from '@/views/landing/components/CovidBanner.vue'
 import Feature from '@/views/landing/components/Feature.vue'
 import BackToTop from '@/layouts/partials/BackToTop.vue'
 import ProgramHubSwiper from '@/views/landing/components/ProgramHubSwiper.vue'
+import AlurProses from '@/views/landing/components/AlurProses.vue'
 import Brands from '@/views/landing/components/Brands.vue'
 import Testimonial from '@/views/landing/components/Testimonial.vue'
-import NewsSwiper from '@/views/landing/components/NewsSwiper.vue'
-import Contact from '@/views/landing/components/Contact.vue'
-import FinancialFooter from '@/views/landing/components/Footer.vue'
+import ManfaatSwiper from '@/views/landing/components/ManfaatSwiper.vue'
+import Registrasi from '@/views/landing/components/Registrasi.vue'
+import Footer from '@/views/landing/components/Footer.vue'
 </script>

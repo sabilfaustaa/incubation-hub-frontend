@@ -29,7 +29,6 @@ import avatar41Img from '@/assets/img/avatar/41.jpg'
 import avatar1Img from '@/assets/img/avatar/01.jpg'
 
 import type {
-  AnchorType,
   BrandType,
   FeatureType,
   IndustryType,
@@ -150,56 +149,26 @@ export const testimonialData: TestimonialType[] = [
   }
 ]
 
-const anchorData: AnchorType[] = [
-  {
-    image: avatar40Img,
-    name: 'Marvin McKinney',
-    role: 'Deputy Director, Capital Department'
-  },
-  {
-    image: avatar4Img,
-    name: 'Jenny Wilson',
-    role: 'Financial Sector Expert'
-  },
-  {
-    image: avatar5Img,
-    name: 'Albert Flores',
-    role: 'Financial Counsellor and Director'
-  },
-  {
-    image: avatar41Img,
-    name: 'Jerome Bell',
-    role: 'Business Analyst'
-  }
-]
-const newsCategories: string[] = ['Business', 'Enterprise', 'Finance', 'Ticks & Trips']
 export const newsData: NewsType[] = [
   {
     cover: news1Img,
-    category: newsCategories[0],
     time: '12 hours ago',
-    title: 'How agile is your forecasting process?',
-    anchor: anchorData[0]
+    title: 'Mendorong Inovasi Berkelanjutan',
+    description:
+      'Dengan fasilitas dan program yang dirancang untuk mendukung inovasi, hub ini memfasilitasi pengembangan solusi baru yang berkelanjutan dan relevan dengan kebutuhan kota.'
   },
   {
     cover: news2Img,
-    category: newsCategories[1],
     time: '1 day ago',
-    title: 'A future with high public debt: low-for-long is not low forever',
-    anchor: anchorData[1]
+    title: 'Mempercepat Pengembangan Solusi Baru',
+    description:
+      'Melalui proses inkubasi yang terstruktur, ide-ide inovatif dapat berkembang lebih cepat dan efektif.'
   },
   {
     cover: news3Img,
-    category: newsCategories[2],
     time: 'Nov 24, 2023',
-    title: 'Understanding the rise in long-term rates',
-    anchor: anchorData[2]
-  },
-  {
-    cover: news4Img,
-    category: newsCategories[3],
-    time: 'Oct 13, 2023',
-    title: 'Stocks making the biggest moves after hours',
-    anchor: anchorData[3]
+    title: 'Menanamkan Budaya Inovasi',
+    description:
+      'Dengan program-program pendukung, hub ini membantu menanamkan budaya inovasi dalam organisasi dan komunitas'
   }
 ]

@@ -1,9 +1,8 @@
 <template>
   <section class="bg-secondary py-5">
     <b-container class="py-2 py-md-4 py-lg-5">
-      <h2 class="h1 text-center pb-4 mb-1 mb-lg-3">Latest News</h2>
+      <h2 class="h1 text-center pb-4 mb-1 mb-lg-3">Artikel</h2>
       <div class="position-relative px-xl-5">
-        <!-- Slider prev/next buttons -->
         <b-button
           size="sm"
           id="prev-news"
@@ -21,7 +20,6 @@
           <Icon :icon="ChevronRightIcon" />
         </b-button>
 
-        <!-- Slider -->
         <div class="px-xl-2">
           <Swiper
             class="mx-n2"
@@ -46,10 +44,20 @@
             }"
           >
             <SwiperSlide class="h-auto pb-3" v-for="(news, idx) in newsData" :key="idx">
-              <NewsCard :news="news" />
+              <article class="card h-100 border-0 shadow-sm mx-2">
+                <div class="position-relative">
+                  <img :src="news.cover" class="card-img-top" alt="Image" />
+                </div>
+                <div class="card-body pb-4">
+                  <h3 class="h5">
+                    <a href="#">{{ news.title }}</a>
+                  </h3>
+                  <hr class="py-1" />
+                  <span class="text-muted pt-3">{{ news.description }}</span>
+                </div>
+              </article>
             </SwiperSlide>
 
-            <!-- Pagination (bullets) -->
             <div class="swiper-pagination position-relative bottom-0 mt-4 mb-lg-2"></div>
           </Swiper>
         </div>
@@ -62,7 +70,6 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { newsData } from '../data'
 import { Navigation, Pagination } from 'swiper/modules'
-import NewsCard from '@/views/landing/components/NewsCard.vue'
 import { Icon } from '@iconify/vue'
 import ChevronRightIcon from '@iconify/icons-bx/chevron-right'
 import ChevronLeftIcon from '@iconify/icons-bx/chevron-left'

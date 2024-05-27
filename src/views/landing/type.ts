@@ -30,13 +30,10 @@ export type TestimonialType = {
   user: UserType
 }
 
-export type AnchorType = UserType
-
 export type NewsType = {
   cover: string
   category?: string
   title: string
   time: string
   description?: string
-  anchor: AnchorType
 }
