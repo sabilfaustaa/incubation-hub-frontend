@@ -3,22 +3,22 @@ import type { NavLinkType } from '@/layouts/type'
 export const navbarLinkData: NavLinkType[] = [
   {
     title: 'Program',
-    link: { name: '' }
+    link: '#program-section'
   },
   {
     title: 'Tentang',
-    link: { name: '' }
+    link: '#tentang-section'
   },
   {
     title: 'Alur Proses',
-    link: { name: '' }
+    link: '#alur-proses-section'
   },
   {
     title: 'Artikel',
-    link: { name: '' }
+    link: '#artikel-section'
   },
   {
     title: 'Pengajuan Inkubasi',
-    link: { name: '' }
+    link: '#registrasi-section'
   }
 ]

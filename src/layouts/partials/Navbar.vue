@@ -19,9 +19,9 @@
         <div v-if="!isMobileView">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
-              <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }">
+              <a v-if="item.link" class="nav-link" :href="item.link">
                 {{ item.title }}
-              </router-link>
+              </a>
 
               <template v-else>
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">{{
@@ -89,9 +89,7 @@
     <template v-slot:default>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li v-for="(item, idx) in navbarLinkData" :key="item.title" class="nav-item dropdown">
-          <router-link v-if="item.link" class="nav-link" :to="{ name: item.link.name }">{{
-            item.title
-          }}</router-link>
+          <a v-if="item.link" class="nav-link" :href="item.link">{{ item.title }}</a>
 
           <template v-else>
             <a class="nav-link dropdown-toggle" v-b-toggle="`nav-collapse-${idx}`" href="#">{{

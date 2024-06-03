@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-secondary py-5">
+  <section id="artikel-section" class="bg-secondary py-5">
     <b-container class="py-2 py-md-4 py-lg-5">
       <h2 class="h1 text-center pb-4 mb-1 mb-lg-3">Artikel</h2>
       <div class="position-relative px-xl-5">

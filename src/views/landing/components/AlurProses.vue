@@ -1,5 +1,5 @@
 <template>
-  <b-container class="mt-2">
+  <b-container id="alur-proses-section" class="mt-2">
     <div class="text-center pb-4 pb-md-0 mb-2 mb-md-5 mx-auto" style="max-width: 530px">
       <h2 class="h2">Alur Proses Incubation Hub</h2>
       <p class="mb-0">Berikut merupakan alur pengajuan Incubation Hub di Jakarta Smart City!</p>

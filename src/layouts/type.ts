@@ -21,7 +21,7 @@ export type NavLinkType = {
   title: string
   image?: string
   links?: LinksType[]
-  link?: LinkType
+  link?: string
 }
 
 // sidebar

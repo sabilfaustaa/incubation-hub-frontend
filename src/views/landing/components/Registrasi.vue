@@ -1,5 +1,5 @@
 <template>
-  <section class="position-relative py-5">
+  <section id="registrasi-section" class="position-relative py-5">
     <b-container class="position-relative zindex-5 py-2 py-md-4 py-lg-5">
       <b-row class="justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3">
         <b-col xl="6" lg="7" md="8" sm="11">

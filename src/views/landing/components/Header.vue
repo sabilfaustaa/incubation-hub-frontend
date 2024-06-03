@@ -41,7 +41,9 @@
                   menanamkan budaya inovasi dalam organisasi.
                 </p>
                 <div class="d-flex flex-column flex-sm-row">
-                  <a href="#" class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4"
+                  <a
+                    href="#registrasi-section"
+                    class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4"
                     >Ajukan Inkubasi</a
                   >
                 </div>

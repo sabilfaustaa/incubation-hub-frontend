@@ -1,5 +1,5 @@
 <template>
-  <b-container class="pt-xl-3 pb-5">
+  <b-container id="program-section" class="pt-xl-3 pb-5">
     <b-row class="pb-2 pb-md-4 pb-lg-5 align-items-center">
       <b-col xl="4" lg="5" class="d-flex flex-column order-1 order-lg-2 offset-xl-1">
         <div class="pb-4 mb-1 mb-lg-3">
