@@ -19,7 +19,7 @@
 
   <!-- <Testimonial /> -->
 
-  <Registrasi />
+  <!-- <Registrasi /> -->
 
   <Footer />
 

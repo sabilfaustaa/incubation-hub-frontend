@@ -7,7 +7,7 @@
         <!-- Statistik Pengguna -->
         <h2 class="h5 text-primary mb-4">Statistik Pengguna</h2>
         <b-row class="mb-4">
-          <b-col sm="4">
+          <b-col sm="6">
             <b-card class="text-center">
               <b-card-text>
                 <h3>{{ totalUsers }}</h3>
@@ -15,7 +15,7 @@
               </b-card-text>
             </b-card>
           </b-col>
-          <b-col sm="4">
+          <b-col sm="6">
             <b-card class="text-center">
               <b-card-text>
                 <h3>{{ totalProjects }}</h3>
@@ -23,14 +23,14 @@
               </b-card-text>
             </b-card>
           </b-col>
-          <b-col sm="4">
+          <!-- <b-col sm="4">
             <b-card class="text-center">
               <b-card-text>
                 <h3>{{ totalTrainings }}</h3>
                 <p class="text-muted">Total Pelatihan</p>
               </b-card-text>
             </b-card>
-          </b-col>
+          </b-col> -->
         </b-row>
 
         <!-- Ringkasan Aktivitas -->
